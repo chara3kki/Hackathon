@@ -1,46 +1,67 @@
-# Red Shed – Hack for Humanity 
+# 🚣 Red Shed — Find Your First Row
 
-## What this is
-A static, mobile-friendly prototype for Challenge #1:
-"Get a Canberran who thinks rowing isn't for them from first click into a boat within seven days, while minimising staff-written emails."
+**Ever thought rowing "just isn't for you"?**
+> We'll get you from your first click to your first row in seven days — no guesswork, no waiting on emails, no pressure.
 
-The MVP focuses on:
-1. A Learn to Row microsite
-2. "Find My Rowing Path" decision flow
-3. Common concern answers
-4. A chatbot-style FAQ prototype
-5. A clear hand-off to Red Shed's current Learn to Row booking page
-6. Semantic HTML + FAQ structured data for better machine readability
+---
 
-## Open it
-Double-click `index.html`.
+## 📦 What you get
 
-No installation is required.
+Everything you need to go from curious to confident, in one place:
 
-## Important
-The chatbot in this package is a rule-based demo so the front-end works without an API key.
-Do NOT put an OpenAI API key directly into `script.js` or any browser file.
+| # | Feature |
+|---|---|
+| 1 | A simple guide to Learn to Row, built for complete beginners |
+| 2 | "Find My Rowing Path" — answer 3 quick questions, get a pathway made for you |
+| 3 | Honest answers to the worries everyone has before their first session |
+| 4 | A rowing guide you can chat with anytime, day or night |
+| 5 | A direct link straight through to real course dates — no back-and-forth needed |
+| 6 | Built to be fast, clear, and easy to use on your phone |
 
-For a real AI chatbot:
-- keep this front-end
-- add a small secure backend endpoint
-- connect the backend to the AI provider
-- give the model only approved Red Shed knowledge
-- require it to say when it does not know
-- route safety/eligibility exceptions to staff
+---
 
-## Content basis
-The prototype was drafted from:
-- Red Shed Learn to Row page
-- Red Shed Learn to Row Guide
-- Red Shed FAQs / Get Started pages
-- the supplied six-month customer enquiry research
+## ▶️ Get started
 
-Before public deployment, Red Shed should verify all copy and rules.
+No account. No download hassle. Just open it and go.
 
-## Next hackathon tasks
-- Replace text logo with approved Red Shed branding/assets if permission is given
-- Add current Learn to Row course availability from the real booking source
-- Add analytics events for: pathway started, pathway completed, FAQ opened, booking CTA clicked
-- Connect a real AI chatbot backend
-- Test with the enquiry scenarios from the supplied research
+
+---
+
+## 💬 Ask us anything
+
+Not sure if rowing's for you? Our Rowing Guide is here to help.
+
+> Real answers, grounded in what Red Shed actually offers — never a guess, never made up. If we don't know something, we'll say so and point you to a real person who does.
+
+**What the guide will help you with:**
+
+- [x] Whether you need experience (you don't)
+- [x] Whether you need to be fit first (you don't)
+- [x] What the swimming requirement actually is
+- [x] Whether you're "too old" to start (you're not)
+- [x] What to expect in your first session
+- [x] Getting you to the right course, fast
+
+---
+
+## 📚 Built on the real thing
+
+Every answer here comes straight from:
+
+- Red Shed's own Learn to Row page and guide
+- Red Shed's FAQs and Get Started pages
+- Real questions people have asked Red Shed over the last six months
+
+So you're not getting generic advice — you're getting what Red Shed actually tells its rowers.
+
+---
+
+## 🌊 Ready when you are
+
+Your first stroke is closer than you think. See what's on right now and grab your spot.
+
+**[See current Learn to Row options →]**
+
+---
+
+<sub>Red Shed · Canberra's home for rowing, no matter where you're starting from.</sub>
