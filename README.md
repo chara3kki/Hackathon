@@ -1,4 +1,4 @@
-# Red Shed – Hack for Humanity MVP
+# Red Shed – Hack for Humanity 
 
 ## What this is
 A static, mobile-friendly prototype for Challenge #1:
