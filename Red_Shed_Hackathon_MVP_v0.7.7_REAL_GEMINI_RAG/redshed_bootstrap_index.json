@@ -1,0 +1,102 @@
+{
+  "site_roots": [
+    "https://redshed.org.au/"
+  ],
+  "generated_at": "2026-08-22T05:20:00+00:00",
+  "snapshot_at": "2026-08-22T05:20:00+00:00",
+  "source_mode": "bundled_official_snapshot",
+  "count": 8,
+  "hosts": [
+    "redshed.org.au"
+  ],
+  "pages": [
+    {
+      "url": "https://redshed.org.au/get-started/",
+      "title": "Get Started - Red Shed",
+      "kind": "bootstrap",
+      "host": "redshed.org.au",
+      "text": "Red Shed's Get Started page says most people arrive in one of three ways. People who are just curious can try the Starter Pack: three sessions for $30, valid for 30 days, across rowing, gym and recovery. For rowing specifically, brand-new rowers should begin with Learn to Row. People who rowed years ago or still row now are directed toward Continue to Row. Youth in Years 7 to 12 are directed to youth programs. People ready for ongoing access can choose a Red Shedder Membership. Red Shed is at 45 John Cardiff Close, Acton ACT 2601 on Black Mountain Peninsula.",
+      "chunks": [
+        "Red Shed's Get Started page says most people arrive in one of three ways. People who are just curious can try the Starter Pack: three sessions for $30, valid for 30 days, across rowing, gym and recovery. For rowing specifically, brand-new rowers should begin with Learn to Row. People who rowed years ago or still row now are directed toward Continue to Row. Youth in Years 7 to 12 are directed to youth programs. People ready for ongoing access can choose a Red Shedder Membership. Red Shed is at 45 John Cardiff Close, Acton ACT 2601 on Black Mountain Peninsula."
+      ],
+      "fetched_at": "2026-08-22T05:20:00+00:00"
+    },
+    {
+      "url": "https://redshed.org.au/learn-to-row/",
+      "title": "Learn to Row - Red Shed",
+      "kind": "bootstrap",
+      "host": "redshed.org.au",
+      "text": "Learn to Row is Red Shed's starting program for adults and youth who are new to rowing. The adult program is for complete beginners and the current page states there are no rowing experience or fitness prerequisites. Small groups are coached by accredited Red Shed coaches. The program is designed to build technique and confidence so participants can continue rowing afterwards. Red Shed also lists a university-student Learn to Row option at a student rate when available. Current course dates and bookings should be checked on the official Learn to Row page.",
+      "chunks": [
+        "Learn to Row is Red Shed's starting program for adults and youth who are new to rowing. The adult program is for complete beginners and the current page states there are no rowing experience or fitness prerequisites. Small groups are coached by accredited Red Shed coaches. The program is designed to build technique and confidence so participants can continue rowing afterwards. Red Shed also lists a university-student Learn to Row option at a student rate when available. Current course dates and bookings should be checked on the official Learn to Row page."
+      ],
+      "fetched_at": "2026-08-22T05:20:00+00:00"
+    },
+    {
+      "url": "https://redshed.org.au/continuing-to-row/",
+      "title": "Continue to Row - Red Shed",
+      "kind": "bootstrap",
+      "host": "redshed.org.au",
+      "text": "Continue to Row is Red Shed's pathway for people who already know how to row and want to keep developing. Adult options include Development, which focuses on refining technique and confidence across boats, and Squad, which is for seasoned rowers training with more intent. Squad has additional entry requirements listed on the official page. Development and Squad sessions appear in the current timetable and can be booked through Mindbody. Red Shed's Get Started page specifically directs people who rowed years ago or still row now toward Continue to Row.",
+      "chunks": [
+        "Continue to Row is Red Shed's pathway for people who already know how to row and want to keep developing. Adult options include Development, which focuses on refining technique and confidence across boats, and Squad, which is for seasoned rowers training with more intent. Squad has additional entry requirements listed on the official page. Development and Squad sessions appear in the current timetable and can be booked through Mindbody. Red Shed's Get Started page specifically directs people who rowed years ago or still row now toward Continue to Row."
+      ],
+      "fetched_at": "2026-08-22T05:20:00+00:00"
+    },
+    {
+      "url": "https://redshed.org.au/starter-pack/",
+      "title": "Starter Pack: Try 3 for $30 - Red Shed",
+      "kind": "bootstrap",
+      "host": "redshed.org.au",
+      "text": "The Starter Pack currently provides three sessions for $30 and is valid for 30 days. It can be used across rowing, gym and recovery in any mix, but rowing sessions require prior rowing experience or completion of Learn to Row. Brand-new rowers should start with Learn to Row. The Starter Pack is a taste of membership life and does not apply to Learn to Row, term programs or school holiday programs. The official Starter Pack page contains the current booking link and fine print.",
+      "chunks": [
+        "The Starter Pack currently provides three sessions for $30 and is valid for 30 days. It can be used across rowing, gym and recovery in any mix, but rowing sessions require prior rowing experience or completion of Learn to Row. Brand-new rowers should start with Learn to Row. The Starter Pack is a taste of membership life and does not apply to Learn to Row, term programs or school holiday programs. The official Starter Pack page contains the current booking link and fine print."
+      ],
+      "fetched_at": "2026-08-22T05:20:00+00:00"
+    },
+    {
+      "url": "https://redshed.org.au/red-shedder-membership/",
+      "title": "Red Shedder Membership - Red Shed",
+      "kind": "bootstrap",
+      "host": "redshed.org.au",
+      "text": "Red Shedder Memberships use one weekly allowance across rowing, gym and recovery, with a 12-week minimum term. Current tiers shown by Red Shed are Copper $35 per week for 1 session, Bronze $55 for 2 sessions, Silver $69 for 3 sessions, Gold $99 for 5 rowing or gym sessions plus unlimited recovery, and Platinum $119 for unlimited sessions. Each tier includes a weekly Red Shed Reset. The current website also points to a separate Recovery membership. Rowing on a membership is for people who already know how to row; new rowers should complete Learn to Row first. All sessions are booked through Mindbody.",
+      "chunks": [
+        "Red Shedder Memberships use one weekly allowance across rowing, gym and recovery, with a 12-week minimum term. Current tiers shown by Red Shed are Copper $35 per week for 1 session, Bronze $55 for 2 sessions, Silver $69 for 3 sessions, Gold $99 for 5 rowing or gym sessions plus unlimited recovery, and Platinum $119 for unlimited sessions. Each tier includes a weekly Red Shed Reset. The current website also points to a separate Recovery membership. Rowing on a membership is for people who already know how to row; new rowers should complete Learn to Row first. All sessions are booked through Mindbody."
+      ],
+      "fetched_at": "2026-08-22T05:20:00+00:00"
+    },
+    {
+      "url": "https://redshed.org.au/about/faqs/",
+      "title": "Red Shed FAQs: membership, booking, access",
+      "kind": "bootstrap",
+      "host": "redshed.org.au",
+      "text": "Red Shed's current FAQs explain membership, booking, access and program pathways. Bookings for rowing, gym, recovery sessions and programs are handled through Mindbody. The Starter Pack is three sessions for $30 valid for 30 days. Rowing on the Starter Pack requires prior rowing experience or a completed Learn to Row program. Brand-new rowers should begin with Learn to Row. Red Shed is at 45 John Cardiff Close, Acton ACT 2601 and free parking is available.",
+      "chunks": [
+        "Red Shed's current FAQs explain membership, booking, access and program pathways. Bookings for rowing, gym, recovery sessions and programs are handled through Mindbody. The Starter Pack is three sessions for $30 valid for 30 days. Rowing on the Starter Pack requires prior rowing experience or a completed Learn to Row program. Brand-new rowers should begin with Learn to Row. Red Shed is at 45 John Cardiff Close, Acton ACT 2601 and free parking is available."
+      ],
+      "fetched_at": "2026-08-22T05:20:00+00:00"
+    },
+    {
+      "url": "https://redshed.org.au/hours/",
+      "title": "Opening Hours - Red Shed",
+      "kind": "bootstrap",
+      "host": "redshed.org.au",
+      "text": "Red Shed's current hours page says the facility is accessible to Red Shedders from 5am to 8pm daily. Rowing and gym session times follow the current Mindbody timetable. Easy Oar Cafe is open 7am to 2pm daily. Casual recovery access without a fob is 9am to 5pm Monday to Friday, while member recovery access is available 5am to 8pm daily with a booking. Office hours are 9am to 5pm Monday to Friday. The address is 45 John Cardiff Close, Acton ACT 2601.",
+      "chunks": [
+        "Red Shed's current hours page says the facility is accessible to Red Shedders from 5am to 8pm daily. Rowing and gym session times follow the current Mindbody timetable. Easy Oar Cafe is open 7am to 2pm daily. Casual recovery access without a fob is 9am to 5pm Monday to Friday, while member recovery access is available 5am to 8pm daily with a booking. Office hours are 9am to 5pm Monday to Friday. The address is 45 John Cardiff Close, Acton ACT 2601."
+      ],
+      "fetched_at": "2026-08-22T05:20:00+00:00"
+    },
+    {
+      "url": "https://redshed.org.au/row/",
+      "title": "Rowing in Canberra for everyone - Red Shed",
+      "kind": "bootstrap",
+      "host": "redshed.org.au",
+      "text": "Red Shed offers rowing pathways from Learn to Row through development and more advanced rowing. Indoor rowing and private coaching are also available. The current Row page notes that the Starter Pack can be used for rowing only when the participant already has rowing experience or has completed Learn to Row. Session times and live availability should be checked in the current timetable or Mindbody.",
+      "chunks": [
+        "Red Shed offers rowing pathways from Learn to Row through development and more advanced rowing. Indoor rowing and private coaching are also available. The current Row page notes that the Starter Pack can be used for rowing only when the participant already has rowing experience or has completed Learn to Row. Session times and live availability should be checked in the current timetable or Mindbody."
+      ],
+      "fetched_at": "2026-08-22T05:20:00+00:00"
+    }
+  ]
+}

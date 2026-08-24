@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Is Rowing For Me? | Red Shed</title>
+  <meta name="description" content="A Red Shed microsite that helps people work out whether rowing is for them, find the right pathway, and get short answers from an AI guide grounded in Red Shed's official website." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+<!--
+V6 is an incremental update of V5.
+It keeps:
+- official Red Shed-style navigation/dropdowns
+- Find My Rowing Path
+- open-ended AI drawer
+- Red Shed public-site crawler/index
+- source links in AI answers
+- refresh controls
+- Flask/OpenAI backend
+
+The microsite itself is now DISTINCT from Learn to Row:
+"Is Rowing For Me?"
+-->
+
+<header class="rs-header">
+  <div class="rs-header-inner">
+    <a class="rs-logo" href="https://redshed.org.au/" target="_blank" rel="noopener">RED SHED</a>
+
+    <nav class="rs-nav" aria-label="Red Shed navigation">
+
+      <div class="nav-item has-menu">
+        <a class="nav-parent active-parent" href="https://redshed.org.au/row/" target="_blank" rel="noopener">
+          Row <span class="caret">⌄</span>
+        </a>
+        <div class="dropdown">
+          <a href="https://redshed.org.au/learn-to-row/" target="_blank" rel="noopener">Learn to Row</a>
+          <a href="https://redshed.org.au/continuing-to-row/" target="_blank" rel="noopener">Continue to Row</a>
+          <a href="https://redshed.org.au/camps-and-clinics/" target="_blank" rel="noopener">Camps &amp; Clinics</a>
+          <a href="https://redshed.org.au/youth-school-programs/" target="_blank" rel="noopener">Youth &amp; Schools</a>
+          <a href="https://redshed.org.au/row/" target="_blank" rel="noopener">More ways to row</a>
+        </div>
+      </div>
+
+      <div class="nav-item has-menu">
+        <a class="nav-parent" href="https://redshed.org.au/train/" target="_blank" rel="noopener">
+          Gym <span class="caret">⌄</span>
+        </a>
+        <div class="dropdown">
+          <a href="https://redshed.org.au/train/train-at-rsx/" target="_blank" rel="noopener">Train at RSX</a>
+          <a href="https://redshed.org.au/train/masters-strength/" target="_blank" rel="noopener">Masters Strength</a>
+          <a href="https://redshed.org.au/train/youth-strength/" target="_blank" rel="noopener">Youth Strength</a>
+          <a href="https://redshed.org.au/train/personal-training/" target="_blank" rel="noopener">Personal Training</a>
+          <a href="https://redshed.org.au/train/timetable/" target="_blank" rel="noopener">Timetable</a>
+        </div>
+      </div>
+
+      <div class="nav-item has-menu">
+        <a class="nav-parent" href="https://redshed.org.au/recover/" target="_blank" rel="noopener">
+          Recover <span class="caret">⌄</span>
+        </a>
+        <div class="dropdown">
+          <a href="https://redshed.org.au/recover/recovery-hub/" target="_blank" rel="noopener">Recovery Hub</a>
+          <a href="https://redshed.org.au/recover/red-shed-resets/" target="_blank" rel="noopener">Red Shed Resets</a>
+          <a href="https://redshed.org.au/recover/book/" target="_blank" rel="noopener">Book</a>
+        </div>
+      </div>
+
+      <div class="nav-item has-menu">
+        <a class="nav-parent" href="https://redshed.org.au/connect/" target="_blank" rel="noopener">
+          Connect <span class="caret">⌄</span>
+        </a>
+        <div class="dropdown">
+          <a href="https://redshed.org.au/easy-oar/" target="_blank" rel="noopener">Easy Oar Cafe</a>
+          <a href="https://redshed.org.au/functions-events/" target="_blank" rel="noopener">Functions &amp; Events</a>
+          <a href="https://redshed.org.au/golden-oar/" target="_blank" rel="noopener">Golden Oar</a>
+          <a href="https://redshed.org.au/volunteer/" target="_blank" rel="noopener">Volunteer</a>
+          <a href="https://redshed.org.au/support/" target="_blank" rel="noopener">Support Red Shed</a>
+        </div>
+      </div>
+
+      <a class="nav-parent nav-direct" href="https://redshed.org.au/easy-oar/" target="_blank" rel="noopener">Cafe</a>
+
+      <div class="nav-item has-menu">
+        <a class="nav-parent" href="https://redshed.org.au/about/" target="_blank" rel="noopener">
+          About <span class="caret">⌄</span>
+        </a>
+        <div class="dropdown">
+          <a href="https://redshed.org.au/about/mission/" target="_blank" rel="noopener">Mission &amp; Values</a>
+          <a href="https://redshed.org.au/about/story/" target="_blank" rel="noopener">The Red Shed Story</a>
+          <a href="https://redshed.org.au/about/committee/" target="_blank" rel="noopener">Committee</a>
+          <a href="https://redshed.org.au/about/team/" target="_blank" rel="noopener">Team</a>
+          <a href="https://redshed.org.au/sustainability/" target="_blank" rel="noopener">Sustainability</a>
+          <a href="https://redshed.org.au/about/faqs/" target="_blank" rel="noopener">FAQs</a>
+          <a href="https://redshed.org.au/about/follow-us/" target="_blank" rel="noopener">Follow us</a>
+        </div>
+      </div>
+
+      <div class="nav-item has-menu">
+        <a class="nav-parent" href="https://redshed.org.au/hours/" target="_blank" rel="noopener">
+          Visit <span class="caret">⌄</span>
+        </a>
+        <div class="dropdown dropdown-right">
+          <a href="https://redshed.org.au/hours/" target="_blank" rel="noopener">Hours &amp; Access</a>
+          <a href="https://redshed.org.au/starter-pack/" target="_blank" rel="noopener">Starter Pack, 3 for $30</a>
+          <a href="https://redshed.org.au/visit/" target="_blank" rel="noopener">Casual Visits &amp; Ten Packs</a>
+          <a href="https://redshed.org.au/contact/" target="_blank" rel="noopener">Contact</a>
+        </div>
+      </div>
+
+      <a class="membership-btn" href="https://redshed.org.au/red-shedder-membership/" target="_blank" rel="noopener">MEMBERSHIPS</a>
+    </nav>
+
+    <button class="mobile-menu-button" id="menuButton">MENU</button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="https://redshed.org.au/" target="_blank" rel="noopener"><strong>RED SHED HOME ↗</strong></a>
+  <a href="https://redshed.org.au/row/" target="_blank" rel="noopener">Row ↗</a>
+  <a href="https://redshed.org.au/train/" target="_blank" rel="noopener">Gym ↗</a>
+  <a href="https://redshed.org.au/recover/" target="_blank" rel="noopener">Recover ↗</a>
+  <a href="https://redshed.org.au/connect/" target="_blank" rel="noopener">Connect ↗</a>
+  <a href="https://redshed.org.au/easy-oar/" target="_blank" rel="noopener">Cafe ↗</a>
+  <a href="https://redshed.org.au/about/" target="_blank" rel="noopener">About ↗</a>
+  <a href="https://redshed.org.au/hours/" target="_blank" rel="noopener">Visit ↗</a>
+  <a class="mobile-membership" href="https://redshed.org.au/red-shedder-membership/" target="_blank" rel="noopener">MEMBERSHIPS ↗</a>
+</div>
+
+<main>
+
+  <!-- Distinct microsite intro: NOT a rebuilt Learn to Row page -->
+  <section class="portal-intro microsite-intro">
+    <div class="content-column">
+      <div class="heading-row">
+        <span class="red-oars" aria-hidden="true">▶▶</span>
+        <div>
+          <p class="eyebrow">RED SHED · START HERE</p>
+          <h1>IS ROWING<br>FOR ME?</h1>
+        </div>
+      </div>
+
+      <p class="intro-copy intro-lead">
+        Curious about rowing, but not sure you are the right age, fit enough, confident enough,
+        experienced enough, or free at the right time? You do not need to work it out alone.
+      </p>
+      <p class="intro-copy secondary-copy">
+        Answer a few quick questions or ask the AI Rowing Guide anything in plain language.
+        We will point you to the most relevant current Red Shed information and next step.
+      </p>
+
+      <div class="intro-actions">
+        <a class="red-button" href="#path">FIND MY PATH</a>
+        <button class="teal-button" id="openChatTop">ASK THE AI ROWING GUIDE</button>
+      </div>
+
+      <div class="source-line">
+        <span id="knowledgeBadge">OFFICIAL RED SHED KNOWLEDGE · CHECKING…</span>
+        <a href="https://redshed.org.au/" target="_blank" rel="noopener">OFFICIAL RED SHED WEBSITE ↗</a>
+      </div>
+      <div class="freshness-line" id="freshnessLine">
+        AI knowledge automatically refreshes across allowed Red Shed public websites and microsites while V7 is running.
+      </div>
+    </div>
+  </section>
+
+  <!-- Why people hesitate: grounded in the supplied enquiry research + challenge brief -->
+  <section class="portal-section white-section">
+    <div class="content-column">
+      <div class="section-title-row">
+        <span class="red-oars" aria-hidden="true">▶▶</span>
+        <h2>WHAT'S MAKING YOU HESITATE?</h2>
+      </div>
+      <p class="section-intro">
+        There is no wrong question. Pick the concern that sounds closest to what is in your head.
+      </p>
+
+      <div class="hesitation-grid">
+        <button class="hesitation-card" data-open-chat="I have never rowed before and I am worried I will be the least capable person there. Is rowing for me?">
+          <span class="mini-oars">▶▶</span>
+          <strong>I'VE NEVER ROWED</strong>
+          <p>I do not want to be the person who cannot keep up.</p>
+        </button>
+
+        <button class="hesitation-card" data-open-chat="I do not feel very fit right now. Is rowing still something I can consider at Red Shed?">
+          <span class="mini-oars">▶▶</span>
+          <strong>I'M NOT VERY FIT</strong>
+          <p>I feel like I should get fitter before I even try.</p>
+        </button>
+
+        <button class="hesitation-card" data-open-chat="I am worried I might be too old to start rowing. What does Red Shed say?">
+          <span class="mini-oars">▶▶</span>
+          <strong>AM I TOO OLD?</strong>
+          <p>I am not sure people like me actually start rowing.</p>
+        </button>
+
+        <button class="hesitation-card" data-open-chat="I am nervous about swimming or being on the water. What current Red Shed information should I know?">
+          <span class="mini-oars">▶▶</span>
+          <strong>WHAT ABOUT SWIMMING?</strong>
+          <p>I want to understand the current requirement before booking.</p>
+        </button>
+
+        <button class="hesitation-card" data-open-chat="My schedule is difficult and I cannot make every time. What current Red Shed rowing options should I look at?">
+          <span class="mini-oars">▶▶</span>
+          <strong>MY SCHEDULE IS HARD</strong>
+          <p>I need something that can fit around work or study.</p>
+        </button>
+
+        <button class="hesitation-card" data-open-chat="I rowed years ago and I am not sure whether I should start again with Learn to Row or Continue to Row.">
+          <span class="mini-oars">▶▶</span>
+          <strong>I ROWED YEARS AGO</strong>
+          <p>I do not know whether my old experience still counts.</p>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Preserved pathway feature -->
+  <section id="path" class="portal-section">
+    <div class="content-column">
+      <div class="section-title-row">
+        <span class="red-oars" aria-hidden="true">▶▶</span>
+        <h2>FIND MY ROWING PATH</h2>
+      </div>
+      <p class="section-intro">
+        Start with where you are now. We will route you toward the right Red Shed page instead of making you guess.
+      </p>
+
+      <div class="path-cards" id="pathCards">
+        <button class="path-card" data-start="never">
+          <div class="card-title"><span class="mini-oars">▶▶</span><h3>COMPLETE BEGINNER</h3></div>
+          <ul>
+            <li>I have never rowed before</li>
+            <li>I want the clearest place to start</li>
+          </ul>
+          <span class="card-cta">FIND MY PATH ↘</span>
+        </button>
+
+        <button class="path-card" data-start="returning">
+          <div class="card-title"><span class="mini-oars">▶▶</span><h3>RETURNING ROWER</h3></div>
+          <ul>
+            <li>I rowed in the past</li>
+            <li>I am unsure where I fit now</li>
+          </ul>
+          <span class="card-cta">FIND MY PATH ↘</span>
+        </button>
+
+        <button class="path-card" data-start="current">
+          <div class="card-title"><span class="mini-oars">▶▶</span><h3>EXPERIENCED ROWER</h3></div>
+          <ul>
+            <li>I can already row</li>
+            <li>I want current ways to row at Red Shed</li>
+          </ul>
+          <span class="card-cta">FIND MY PATH ↘</span>
+        </button>
+      </div>
+
+      <div class="path-wizard hidden" id="pathWizard">
+        <div class="wizard-top">
+          <button class="back-button" id="backToCards">← BACK</button>
+          <span id="wizardProgress">STEP 1 OF 2</span>
+        </div>
+
+        <div class="wizard-step" id="wizardStep1">
+          <h3>WHAT IS THE MAIN THING HOLDING YOU BACK?</h3>
+          <div class="option-list">
+            <button data-barrier="confidence">I am worried I will be the least capable person there.</button>
+            <button data-barrier="fitness">I do not think I am fit enough.</button>
+            <button data-barrier="swimming">I am unsure about swimming or water confidence.</button>
+            <button data-barrier="schedule">I need a course time that fits around work or study.</button>
+            <button data-barrier="commitment">I want the lowest-pressure way to try Red Shed first.</button>
+          </div>
+        </div>
+
+        <div class="wizard-step hidden" id="wizardStep2">
+          <h3>WHEN ARE YOU MOST LIKELY TO BE FREE?</h3>
+          <div class="option-list">
+            <button data-time="weekend">Weekend mornings</button>
+            <button data-time="early">Early weekday mornings</button>
+            <button data-time="flexible">I can be flexible</button>
+          </div>
+        </div>
+
+        <div class="wizard-result hidden" id="wizardResult">
+          <span class="result-label">YOUR STARTING POINT</span>
+          <h3 id="resultTitle"></h3>
+          <p id="resultBody"></p>
+          <div class="result-detail" id="resultDetail"></div>
+          <div class="result-links">
+            <a id="resultPrimary" target="_blank" rel="noopener">SEE CURRENT OPTIONS ↗</a>
+            <button id="resultAsk">ASK THE AI GUIDE ↗</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core challenge feature -->
+  <section class="teal-feature">
+    <div class="content-column">
+      <div class="teal-grid">
+        <div>
+          <div class="section-title-row light">
+            <span class="red-oars" aria-hidden="true">▶▶</span>
+            <h2>ASK ANYTHING. GET A SHORT ANSWER.</h2>
+          </div>
+          <p>
+            The AI Rowing Guide searches Red Shed's current public website knowledge first,
+            then answers in short, easy language and shows the official pages it used.
+          </p>
+          <p class="small-light">
+            It is designed to cover Red Shed's public rowing, gym, recovery, connect, cafe,
+            membership, visit, FAQ and other discoverable microsite/page content.
+          </p>
+        </div>
+        <div class="teal-feature-actions">
+          <button class="red-button" id="openChatHero">ASK A QUESTION</button>
+          <a class="outline-light-button" href="https://redshed.org.au/" target="_blank" rel="noopener">OFFICIAL WEBSITE ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Explain live knowledge in simple terms -->
+  <section class="portal-section white-section">
+    <div class="content-column">
+      <div class="section-title-row">
+        <span class="red-oars" aria-hidden="true">▶▶</span>
+        <h2>KEPT UP TO DATE FROM RED SHED</h2>
+      </div>
+
+      <div class="update-flow">
+        <div><span>01</span><strong>READ</strong><p>Public Red Shed pages and discoverable Red Shed documents are indexed.</p></div>
+        <div><span>02</span><strong>REFRESH</strong><p>The index automatically checks for fresh Red Shed pages, subdomains, microsites and documents while the server is running.</p></div>
+        <div><span>03</span><strong>RETRIEVE</strong><p>Your question pulls the most relevant current official Red Shed material.</p></div>
+        <div><span>04</span><strong>ANSWER</strong><p>The AI turns it into a short, simple answer with official source links.</p></div>
+      </div>
+
+      <p class="fine-print">
+        The official Red Shed websites remain the source of truth. V7 automatically covers redshed.org.au and its public subdomains. Private/login-only systems and unrelated third-party sites are not scraped. Separately hosted Red Shed-owned domains can be added to the allow-list.
+      </p>
+    </div>
+  </section>
+
+  <section id="questions" class="portal-section">
+    <div class="content-column">
+      <div class="section-title-row">
+        <span class="red-oars" aria-hidden="true">▶▶</span>
+        <h2>COMMON QUESTIONS, WITHOUT THE EMAIL LOOP</h2>
+      </div>
+
+      <div class="accordion">
+        <details>
+          <summary><span>I've never rowed. Where do I start?</span><b>+</b></summary>
+          <p>Use Find My Rowing Path or ask the AI guide. It will use the current official Red Shed pages to point you toward the most relevant starting option.</p>
+        </details>
+        <details>
+          <summary><span>I rowed years ago. Does my experience still count?</span><b>+</b></summary>
+          <p>This was a repeated theme in Red Shed's enquiry research. The AI guide can compare the current Learn to Row and Continue to Row information rather than relying on an old fixed answer.</p>
+        </details>
+        <details>
+          <summary><span>Can the bot answer questions outside Learn to Row?</span><b>+</b></summary>
+          <p>Yes. It searches discoverable public content across the Red Shed website, including other Red Shed program and information pages.</p>
+        </details>
+        <details>
+          <summary><span>What happens when Red Shed changes something?</span><b>+</b></summary>
+          <p>The website index refreshes automatically while the server is running, and can also be refreshed manually from the AI drawer.</p>
+        </details>
+        <details>
+          <summary><span>Will it invent a price, course date or available place?</span><b>+</b></summary>
+          <p>No. The AI is instructed to use official retrieved Red Shed material and avoid inventing live prices, availability, policies or dates. Where needed, it sends the visitor to the relevant official page.</p>
+        </details>
+      </div>
+
+      <button class="red-button questions-chat" id="openChatQuestions">ASK THE AI ROWING GUIDE</button>
+    </div>
+  </section>
+
+  <section class="portal-section white-section">
+    <div class="content-column">
+      <div class="section-title-row">
+        <span class="red-oars" aria-hidden="true">▶▶</span>
+        <h2>WHEN YOU'RE READY, GO TO THE REAL NEXT STEP</h2>
+      </div>
+
+      <div class="link-grid">
+        <a href="https://redshed.org.au/learn-to-row/" target="_blank" rel="noopener">
+          <strong>Learn to Row</strong><span>For complete beginners ↗</span>
+        </a>
+        <a href="https://redshed.org.au/continuing-to-row/" target="_blank" rel="noopener">
+          <strong>Continue to Row</strong><span>For returning and experienced rowers ↗</span>
+        </a>
+        <a href="https://redshed.org.au/get-started/" target="_blank" rel="noopener">
+          <strong>Get Started</strong><span>See Red Shed's wider starting options ↗</span>
+        </a>
+        <a href="https://redshed.org.au/starter-pack/" target="_blank" rel="noopener">
+          <strong>Starter Pack</strong><span>Explore the current Red Shed starter offer ↗</span>
+        </a>
+        <a href="https://redshed.org.au/hours/" target="_blank" rel="noopener">
+          <strong>Hours &amp; Access</strong><span>Plan a visit ↗</span>
+        </a>
+        <a href="https://redshed.org.au/contact/" target="_blank" rel="noopener">
+          <strong>Contact</strong><span>For something the site genuinely cannot resolve ↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta">
+    <div class="content-column">
+      <div class="section-title-row light">
+        <span class="cream-oars" aria-hidden="true">▶▶</span>
+        <h2>STILL WONDERING IF ROWING IS FOR YOU?</h2>
+      </div>
+      <p>Ask the question you would normally email. Start there.</p>
+      <div class="final-actions">
+        <button class="white-button" id="openChatCta">ASK THE AI ROWING GUIDE</button>
+        <a class="outline-light-button" href="https://redshed.org.au/row/" target="_blank" rel="noopener">EXPLORE ROWING AT RED SHED ↗</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rs-footer">
+  <div class="content-column footer-grid">
+    <strong class="footer-logo">RED SHED</strong>
+    <p>
+      Hack for Humanity prototype: <strong>Is Rowing For Me?</strong><br>
+      A new guided microsite concept designed to sit within Red Shed's existing digital experience,
+      not replace its Learn to Row page.
+    </p>
+    <div class="footer-links">
+      <a href="https://redshed.org.au/" target="_blank" rel="noopener">Official website ↗</a>
+      <a href="https://redshed.org.au/row/" target="_blank" rel="noopener">Row ↗</a>
+      <a href="https://redshed.org.au/about/faqs/" target="_blank" rel="noopener">FAQs ↗</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Preserved website-grounded AI drawer -->
+<button class="floating-chat" id="floatingChat" aria-label="Open AI Rowing Guide">
+  <span>ASK</span><strong>AI</strong>
+</button>
+
+<aside class="chat-drawer" id="chatDrawer" aria-hidden="true">
+  <div class="chat-header">
+    <div>
+      <span class="chat-eyebrow">RED SHED WEBSITE-GROUNDED</span>
+      <strong>AI Rowing Guide</strong>
+    </div>
+    <button id="closeChat" aria-label="Close chat">×</button>
+  </div>
+
+  <div class="chat-status" id="chatStatus">Checking official-site knowledge…</div>
+
+  <div class="chat-tools">
+    <a href="https://redshed.org.au/" target="_blank" rel="noopener">OPEN OFFICIAL SITE ↗</a>
+    <button id="refreshKnowledge">REFRESH SITE KNOWLEDGE</button>
+  </div>
+
+  <div class="chat-body" id="chatMessages">
+    <div class="chat-message assistant">
+      <p>
+        Ask me anything about Red Shed or getting into rowing. I will search the indexed public
+        Red Shed website first and keep the answer short and easy to understand.
+      </p>
+    </div>
+  </div>
+
+  <div class="chat-suggestions">
+    <button data-prompt="I've never rowed before. Is rowing for me and where should I start?">I've never rowed</button>
+    <button data-prompt="I'm worried I am not fit enough to start rowing. What does Red Shed currently say?">I'm not very fit</button>
+    <button data-prompt="I rowed years ago. What current Red Shed pathway should I look at?">I rowed years ago</button>
+    <button data-prompt="What are the current Red Shed opening hours and where is it?">Hours &amp; location</button>
+  </div>
+
+  <form class="chat-form" id="chatForm">
+    <textarea id="chatInput" rows="1" placeholder="Ask any Red Shed question…" aria-label="Ask any Red Shed question"></textarea>
+    <button type="submit">SEND ↗</button>
+  </form>
+</aside>
+
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<script src="./app.js"></script>
+</body>
+</html>

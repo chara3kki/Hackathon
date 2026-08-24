@@ -1,0 +1,92 @@
+[
+  {
+    "host": "instagram.com",
+    "url": "https://www.instagram.com/redshedcbr/",
+    "anchor": "",
+    "found_on": "https://redshed.org.au/"
+  },
+  {
+    "host": "revolutionise.com.au",
+    "url": "https://www.revolutionise.com.au/bmrc/home/",
+    "anchor": "Black Mountain Rowing Club",
+    "found_on": "https://redshed.org.au/continuing-to-row/"
+  },
+  {
+    "host": "instagram.com",
+    "url": "https://www.instagram.com/easyoarcafe/",
+    "anchor": "@easyoarcafe",
+    "found_on": "https://redshed.org.au/easy-oar/"
+  },
+  {
+    "host": "maps.app.goo.gl",
+    "url": "https://maps.app.goo.gl/oxCY9Mo2NCwpUgF7A",
+    "anchor": "Get directions on Google Maps",
+    "found_on": "https://redshed.org.au/contact/"
+  },
+  {
+    "host": "instagram.com",
+    "url": "https://www.instagram.com/redshedcbr.events/",
+    "anchor": "@redshedcbr.events",
+    "found_on": "https://redshed.org.au/functions-events/"
+  },
+  {
+    "host": "asf.org.au",
+    "url": "https://asf.org.au/campaigns/red-shed/red-shed-support-programs",
+    "anchor": "Australian Sports Foundation",
+    "found_on": "https://redshed.org.au/support/"
+  },
+  {
+    "host": "facebook.com",
+    "url": "https://www.facebook.com/redshedcbrau/",
+    "anchor": "Red Shed on Facebook",
+    "found_on": "https://redshed.org.au/about/follow-us/"
+  },
+  {
+    "host": "instagram.com",
+    "url": "https://www.instagram.com/rsx_strengthclub/",
+    "anchor": "@rsx_strengthclub",
+    "found_on": "https://redshed.org.au/about/follow-us/"
+  },
+  {
+    "host": "instagram.com",
+    "url": "https://www.instagram.com/goldenoars/",
+    "anchor": "@goldenoars",
+    "found_on": "https://redshed.org.au/about/follow-us/"
+  },
+  {
+    "host": "canberratimes.com.au",
+    "url": "https://www.canberratimes.com.au/story/8685807/act-couple-spends-10-million-to-broaden-rowing-to-public-school-kids/",
+    "anchor": "Read their story in The Canberra Times",
+    "found_on": "https://redshed.org.au/about/story/"
+  },
+  {
+    "host": "goldenoar.com.au",
+    "url": "https://goldenoar.com.au",
+    "anchor": "Visit goldenoar.com.au",
+    "found_on": "https://redshed.org.au/golden-oar/"
+  },
+  {
+    "host": "canberratimes.com.au",
+    "url": "https://www.canberratimes.com.au/story/8832926/discover-the-red-shed-rowing-fun-on-lake-burley-griffin/",
+    "anchor": "The Canberra Times",
+    "found_on": "https://redshed.org.au/journal/canberra-times-november-30/"
+  },
+  {
+    "host": "rowingact.org.au",
+    "url": "https://www.rowingact.org.au/act-indoor-rowing-championships/",
+    "anchor": "Rowing ACT’s website",
+    "found_on": "https://redshed.org.au/journal/red-shed-hosts-act-indoor-rowing-championships/"
+  },
+  {
+    "host": "redshed.helloclub.com",
+    "url": "https://redshed.helloclub.com/events/view/6683689733160ccec7270a02",
+    "anchor": "Learn to Row Week 1 (8th – 12th July): Session 9am until 12pm.",
+    "found_on": "https://redshed.org.au/journal/oar-explore-launch-in-july-school-holidays/"
+  },
+  {
+    "host": "redshed.helloclub.com",
+    "url": "https://redshed.helloclub.com/events/view/66838cc821399f6dcde917de",
+    "anchor": "Learn to Row Week 2 (15th – 19th July): Session 9am until 12pm.",
+    "found_on": "https://redshed.org.au/journal/oar-explore-launch-in-july-school-holidays/"
+  }
+]
